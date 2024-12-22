@@ -3,9 +3,9 @@
 -- https://www.phpmyadmin.net/
 --
 -- Host: 127.0.0.1
--- Generation Time: Dec 22, 2024 at 10:51 AM
+-- Generation Time: Dec 22, 2024 at 12:03 PM
 -- Server version: 10.4.32-MariaDB
--- PHP Version: 8.0.30
+-- PHP Version: 8.2.12
 
 SET SQL_MODE = "NO_AUTO_VALUE_ON_ZERO";
 START TRANSACTION;
@@ -94,6 +94,7 @@ CREATE TABLE `feedback` (
 --
 
 CREATE TABLE `passport_info` (
+  `user_id` int(11) NOT NULL,
   `passport_no` varchar(255) NOT NULL,
   `issued_date` date NOT NULL,
   `issued_place` varchar(255) NOT NULL,
@@ -127,6 +128,7 @@ CREATE TABLE `payment` (
 --
 
 CREATE TABLE `personal_infor` (
+  `user_id` int(11) NOT NULL,
   `dob` date NOT NULL,
   `place_of_birth` varchar(255) NOT NULL,
   `nationality` varchar(255) NOT NULL,
@@ -147,6 +149,7 @@ CREATE TABLE `personal_infor` (
 --
 
 CREATE TABLE `users` (
+  `user_id` int(11) NOT NULL,
   `FNAME` varchar(255) NOT NULL,
   `LNAME` varchar(255) NOT NULL,
   `EMAIL` varchar(255) NOT NULL,
@@ -162,11 +165,55 @@ CREATE TABLE `users` (
 -- Dumping data for table `users`
 --
 
-INSERT INTO `users` (`FNAME`, `LNAME`, `EMAIL`, `date_available`, `position_applied`, `PHONE_NUMBER`, `PASSWORD`, `GENDER`, `cv`) VALUES
-('Vivek', 'C', 'vivekc@gmail.com', '2025-01-02', 'Deck-Office', 293804257, 'f925916e2754e5e03f75dd58a5733251', 'male', ''),
-('abc', 'N', 'tejas@gmail.com', '2025-01-03', 'Deck-Officer', 8458205729, 'f925916e2754e5e03f75dd58a5733251', 'male', ''),
-('xyz', 'C', 'xyz@gmail.com', '2025-01-03', 'Third Office', 453897937, 'f925916e2754e5e03f75dd58a5733251', 'male', ''),
-('John', 'D', 'john@gmail.com', '2025-01-23', 'Second-Office', 2875935734, 'f925916e2754e5e03f75dd58a5733251', 'male', '6767c895e496b7.83275135.pdf');
+INSERT INTO `users` (`user_id`, `FNAME`, `LNAME`, `EMAIL`, `date_available`, `position_applied`, `PHONE_NUMBER`, `PASSWORD`, `GENDER`, `cv`) VALUES
+(1, 'Vivek', 'C', 'vivekc@gmail.com', '2025-01-02', 'Deck-Office', 293804257, 'f925916e2754e5e03f75dd58a5733251', 'male', ''),
+(2, 'abc', 'N', 'tejas@gmail.com', '2025-01-03', 'Deck-Officer', 8458205729, 'f925916e2754e5e03f75dd58a5733251', 'male', ''),
+(3, 'xyz', 'C', 'xyz@gmail.com', '2025-01-03', 'Third Office', 453897937, 'f925916e2754e5e03f75dd58a5733251', 'male', ''),
+(4, 'John', 'D', 'john@gmail.com', '2025-01-23', 'Second-Office', 2875935734, 'f925916e2754e5e03f75dd58a5733251', 'male', '6767c895e496b7.83275135.pdf');
+
+--
+-- Indexes for dumped tables
+--
+
+--
+-- Indexes for table `passport_info`
+--
+ALTER TABLE `passport_info`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- Indexes for table `personal_infor`
+--
+ALTER TABLE `personal_infor`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- Indexes for table `users`
+--
+ALTER TABLE `users`
+  ADD PRIMARY KEY (`user_id`);
+
+--
+-- AUTO_INCREMENT for dumped tables
+--
+
+--
+-- AUTO_INCREMENT for table `passport_info`
+--
+ALTER TABLE `passport_info`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `personal_infor`
+--
+ALTER TABLE `personal_infor`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT;
+
+--
+-- AUTO_INCREMENT for table `users`
+--
+ALTER TABLE `users`
+  MODIFY `user_id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=5;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;

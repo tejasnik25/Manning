@@ -86,7 +86,7 @@ require_once('connection.php');
             <p class="par">Lorem ipsum dolor sit.<br>
                 Lorem ipsum dolor sit amet, consectetur adipisicing elit. 
                 Quidem deserunt ex eos harum repellendus accusantium quibusdam praesentium fugiat odit quas.  </p>
-            <button class="cn"><a href="register.php">JOIN US</a></button>
+            <button class="cn"><a href="page1.php">JOIN US</a></button>
             <div class="form">
                 <h2>Login Here</h2>
                 <form method="POST"> 
