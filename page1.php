@@ -264,7 +264,7 @@ if(isset($_POST['regs']))
         <input type="file" name="cv" accept=".pdf,.doc,.docx" required>
 
         <!-- Download Sample CV link -->
-        <p>Download the <a href="uploads/Tejas_Nikam_CV.docx" download>sample CV</a> here.</p>
+        <p>Download the <a href="uploads/Crew CV blank form.pdf" download>sample CV</a> here.</p>
         <br><br>
 
         <label>Password : </label>

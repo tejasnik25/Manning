@@ -1,4 +1,3 @@
-
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -23,10 +22,9 @@
 </head>
 <body>
 
-
-
 <?php
 require_once('connection.php');
+session_start();
     if(isset($_POST['login']))
     {
         $email=$_POST['email'];
@@ -45,7 +43,7 @@ require_once('connection.php');
                 $db_password = $row['PASSWORD'];
                 if(md5($pass)  == $db_password)
                 {
-                    header("location: cardetails.php");
+                    header("location: profile.php");
                     session_start();
                     $_SESSION['email'] = $email;
                     
@@ -63,6 +61,8 @@ require_once('connection.php');
 
 
 ?>
+
+
     <div class="hai">
         <div class="navbar">
             <div class="icon">
@@ -96,13 +96,6 @@ require_once('connection.php');
                 </form>
                 <p class="link">Don't have an account?<br>
                 <a href="page1.php">Sign up</a> here</a></p>
-                <!-- <p class="liw">or<br>Log in with</p>
-                <div class="icon">
-                    &emsp;&emsp;&emsp;&ensp;<a href="https://www.facebook.com/"><ion-icon name="logo-facebook"></ion-icon> </a>&nbsp;&nbsp;
-                    <a href="https://www.instagram.com/"><ion-icon name="logo-instagram"></ion-icon> </a>&ensp;
-                    <a href="https://myaccount.google.com/"><ion-icon name="logo-google"></ion-icon> </a>&ensp;
-                    
-                </div> -->
             </div>
         </div>
     </div>
