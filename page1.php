@@ -254,10 +254,8 @@ if(isset($_POST['regs']))
         <input type="text" name="position_applied" id="name" required>
         <br><br>
 
-        <label>Phone Number : </label>
-        <br>
-        <input type="tel" name="ph" maxlength="10" onkeypress="return onlyNumberKey(event)" id="name"
-          placeholder="Enter Your Phone Number" required>
+        <label for="ph">Phone Number: </label>
+        <input type="tel" id="ph" name="ph" maxlength="10" onkeypress="return onlyNumberKey(event)" placeholder="Enter Your Phone Number" required>
         <br><br>
 
         <label>Upload CV (PDF, DOC, DOCX) : </label>

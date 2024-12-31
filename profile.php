@@ -26,6 +26,8 @@
     animation: infiniteScrollBg 50s linear infinite;
 }
 .navbar{
+    display: flex;
+    gap: 20vw;
     width: 1200px;
     height: 75px;
     margin: auto;
@@ -126,6 +128,7 @@ ul li a{
 }   
 </style>
 
+
 <?php
 require_once('connection.php');
 session_start();
@@ -156,7 +159,8 @@ if ($result) {
     echo '<div class="hai">
             <div class="navbar">
                 <div class="icon">
-                    <h2 class="logo">CaRs</h2>
+                    <a href="index.html" class="logo">
+                    <img src="images/kmtc_logo_png.png" class="logo" alt=""></a>
                 </div>
                 <div class="menu">
                     <ul>

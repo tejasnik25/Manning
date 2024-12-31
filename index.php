@@ -66,14 +66,14 @@ session_start();
     <div class="hai">
         <div class="navbar">
             <div class="icon">
-                <h2 class="logo">KAMI</h2>
+                <h2 class="logo">
+                    <img src="images/kmtc_logo_png.png">
+                </h2>
             </div>
             <div class="menu">
                 <ul>
                     <li><a href="#">HOME</a></li>
-                    <li><a href="aboutus.html">ABOUT</a></li>
-                    <li><a href="#">SERVICES</a></li>
-                    
+                    <li><a href="">ABOUT</a></li>
                     <li><a href="contactus.html">CONTACT</a></li>
                   <li> <button class="adminbtn"><a href="adminlogin.php">ADMIN LOGIN</a></button></li>
                 </ul>

@@ -107,7 +107,7 @@ mysqli_stmt_close($stmt);
 
 <style>
       body{
-        background:  #fdcd3b;
+        background:rgb(251, 251, 251);
         background-size: auto;
          background-position:unset;
          /* background-repeat: ; */
@@ -170,7 +170,7 @@ input#cpsw{
 }</style> 
 
 
-<button id="back"><a href="cardetails.php">HOME</a></button>
+<button id="back"><a href="profile.php">HOME</a></button>
     <h1 id="fam">Edit Your Profile</h1>
  <div class="main">
 

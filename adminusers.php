@@ -30,6 +30,8 @@
     animation: infiniteScrollBg 50s linear infinite;
 }
 .navbar{
+    display:flex;
+    gap:30vw;
     width: 1200px;
     height: 75px;
     margin: auto;
@@ -133,7 +135,7 @@ ul li a{
 
 .nn{
     width:100px;
-    /* background: #ff7200; */
+    background: #ff7200;
     border:none;
     height: 40px;
     font-size: 18px;
@@ -184,15 +186,15 @@ $num=mysqli_num_rows($queryy);
 <div class="hai">
         <div class="navbar">
             <div class="icon">
-                <h2 class="logo">CaRs</h2>
+                <h2 class="logo">
+                    <img src="images/kmtc_logo_png.png">
+                </h2>
             </div>
             <div class="menu">
                 <ul>
-                    <li><a href="adminvehicle.php">VEHICLE MANAGEMENT</a></li>
-                    <li><a href="adminusers.php">USERS</a></li>
-                    <li><a href="admindash.php">FEEDBACKS</a></li>
-                    
-                    <li><a href="adminbook.php">BOOKING REQUEST</a></li>
+                <li><a href="#">HOME</a></li>
+                    <li><a href="">ABOUT</a></li>
+                    <li><a href="#">SERVICES</a></li>
                   <li> <button class="nn"><a href="index.php">LOGOUT</a></button></li>
                 </ul>
             </div>

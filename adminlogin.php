@@ -21,11 +21,12 @@
 
 body{
     width: 90%;
-    background-image: url("images/adminbg2.jpg");
+    background-image: linear-gradient(rgba(4,9,30,0.7),
+    rgba(4,9,30,0.7)),url(images/hero1.jpg);
     background-repeat: no-repeat;
     background-position: center;
     background-size: cover;
-    height: 95vh;
+    height: 98vh;
 }
 
 .form{
