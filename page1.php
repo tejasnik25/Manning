@@ -249,10 +249,18 @@ if(isset($_POST['regs']))
         <br><br>
 
 
-        <label>Position Applied : </label>
+        <label for="fieldSelect">Position Applied:</label>
         <br>
-        <input type="text" name="position_applied" id="name" required>
+        <select id="fieldSelect" onchange="displayField()">
+            <option value="">--Select a field--</option>
+            <option value="Position Applied">Position Applied</option>
+            <option value="Email">Email</option>
+            <option value="Phone">Phone</option>
+            <option value="Address">Address</option>
+        </select>
         <br><br>
+        <div id="fieldInput" style="margin-top: 20px;"></div>
+
 
         <label for="ph">Phone Number: </label>
         <input type="tel" id="ph" name="ph" maxlength="10" onkeypress="return onlyNumberKey(event)" placeholder="Enter Your Phone Number" required>
@@ -399,6 +407,7 @@ if(isset($_POST['regs']))
             }
         });
     </script> -->
+    <script src="script.js"></script>
 </body>
 
 </html>
