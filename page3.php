@@ -26,12 +26,13 @@ if (isset($_POST['submit_page3'])) {
     $result3 = mysqli_query($con, $sql3);
 
     if ($result3) {
-        // Redirect to page 4
-        echo '<script>alert("Registration Successful Press ok to login")</script>';
-        echo '<script>window.location.href = "index.php";</script>';
+      // Redirect with PHP header
+      header("Location: index.php");
+      exit; // Make sure to call exit after header redirection to prevent further script execution
     } else {
-        echo '<script>alert("Error saving data.")</script>';
+      echo '<script>alert("Error saving data.")</script>';
     }
+  
 }
 
 ?>
@@ -109,16 +110,16 @@ input#cpsw{
     <input type="text" name="passport_no" maxlength="10" required><br><br>
 
     <label>Passport Issued Date:</label><br>
-    <input type="date" name="passport_issued_date" required><br><br>
+    <input type="date" name="issued_date" required><br><br>
 
     <label>Passport Place:</label><br>
-    <input type="text" name="passport_place" required><br><br>
+    <input type="text" name="issued_place" required><br><br>
 
     <label>Passport Expiry Date:</label><br>
-    <input type="date" name="passport_expiry_date" required><br><br>
+    <input type="date" name="expiring_date" required><br><br>
 
     <label>Issued by Government:</label><br>
-    <input type="text" name="passport_issued_by" required><br><br>
+    <input type="text" name="issued_by" required><br><br>
 
     <label>National Seaman's Book Number:</label><br>
     <input type="text" name="seaman_book_no" maxlength="10" required><br><br>
@@ -126,16 +127,13 @@ input#cpsw{
     <label>National Seaman's Book Issued Date:</label><br>
     <input type="date" name="seaman_book_issued_date" required><br><br>
 
-    <label>National Seaman's Book Place:</label><br>
-    <input type="text" name="seaman_book_place" required><br><br>
-
     <label>National Seaman's Book Expiry Date:</label><br>
-    <input type="date" name="seaman_book_expiry_date" required><br><br>
+    <input type="date" name="seaman_book_expiring_date" required><br><br>
 
     <label>Issued by Government:</label><br>
     <input type="text" name="seaman_book_issued_by" required><br><br>
 
-    <input type="submit" value="Next" name="regs">
+    <input type="submit" value="Next" name="submit_page3">
 </form>
 </div>
 </div>

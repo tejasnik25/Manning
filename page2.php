@@ -23,7 +23,7 @@ if (isset($_POST['submit_page2'])) {
     $mother_name = mysqli_real_escape_string($con, $_POST['mother_name']);
     $home_address = mysqli_real_escape_string($con, $_POST['home_address']);
 
-    $sql2 = "INSERT INTO personal_info (user_id, dob, place_of_birth, nationality, height, weight, hair_color, eye_color, marital_status, father_name, mother_name, home_address) 
+    $sql2 = "INSERT INTO personal_infor (user_id, dob, place_of_birth, nationality, height, weight, hair_color, eye_color, marital_status, father_name, mother_name, home_address) 
              VALUES ('$user_id', '$dob', '$place_of_birth', '$nationality', '$height', '$weight', '$hair_color', '$eye_color', '$marital_status', '$father_name', '$mother_name', '$home_address')";
     $result2 = mysqli_query($con, $sql2);
 
@@ -140,7 +140,7 @@ input#cpsw{
     <label>Home Address:</label><br>
     <textarea name="home_address" required></textarea><br><br>
 
-    <input type="submit" value="Next" name="regs">
+    <input type="submit" value="Next" name="submit_page2">
 </form>
 </div>
 </div>

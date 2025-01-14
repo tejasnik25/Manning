@@ -36,19 +36,6 @@ CREATE TABLE `admin` (
 
 INSERT INTO `admin` (`ADMIN_ID`, `ADMIN_PASSWORD`) VALUES
 ('ADMIN', 'ADMIN');
-
--- --------------------------------------------------------
-
---
--- Table structure for table `feedback`
---
-
-CREATE TABLE `feedback` (
-  `FED_ID` int(11) NOT NULL,
-  `EMAIL` varchar(255) NOT NULL,
-  `COMMENT` text NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
-
 -- --------------------------------------------------------
 
 --
@@ -67,21 +54,6 @@ CREATE TABLE `passport_info` (
   `seaman_book_expiring_date` date NOT NULL,
   `seaman_book_issued_by` varchar(255) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_general_ci;
-
--- --------------------------------------------------------
-
---
--- Table structure for table `payment`
---
-
-CREATE TABLE `payment` (
-  `PAY_ID` int(11) NOT NULL,
-  `BOOK_ID` int(11) NOT NULL,
-  `CARD_NO` varchar(255) NOT NULL,
-  `EXP_DATE` varchar(255) NOT NULL,
-  `CVV` int(11) NOT NULL,
-  `PRICE` int(11) NOT NULL
-) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_unicode_ci;
 
 -- --------------------------------------------------------
 
